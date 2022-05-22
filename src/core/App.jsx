@@ -1,19 +1,28 @@
 import { lazy } from 'solid-js';
-import { Routes, Route, Link } from 'solid-app-router';
-
+import { useRoutes } from 'solid-app-router';
 import Navbar from '../components/Navbar';
 
-const Home = lazy(() => import('../pages/Home'));
-const Projects = lazy(() => import('../pages/Projects'));
+const routes = [
+    {
+        path: '/',
+        component: lazy(() => import('../pages/Home')),
+    },
+    {
+        path: '/projects',
+        component: lazy(() => import('../pages/Projects')),
+    },
+    {
+        path: '/*all',
+        component: lazy(() => import('../pages/404')),
+    },
+];
 
 function App() {
+    const Routes = useRoutes(routes);
     return (
         <>
             <Navbar />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/projects' element={<Projects />} />
-            </Routes>
+            <Routes />
         </>
     );
 }
