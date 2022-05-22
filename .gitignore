@@ -1,2 +1,6 @@
+// build files
 node_modules
 dist
+
+// ide files
+.idea
