@@ -8,8 +8,7 @@
         "start": "vite",
         "preview": "vite preview",
         "build": "vite build",
-        "clean": "rm -rf dist node_modules",
-        "deploy": "echo \"not ready to deploy yet\""
+        "clean": "rm -rf dist node_modules"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.7",
