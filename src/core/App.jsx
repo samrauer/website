@@ -12,6 +12,10 @@ const routes = [
         component: lazy(() => import('../pages/Projects')),
     },
     {
+        path: '/aero',
+        component: lazy(() => import('../pages/Aero')),
+    },
+    {
         path: '/*all',
         component: lazy(() => import('../pages/404')),
     },
